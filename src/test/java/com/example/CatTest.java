@@ -9,33 +9,29 @@ public class CatTest extends TestCase {
 
     private Feline feline = new Feline();
     private Cat cat = new Cat(feline);
-    private String expectedSound;
-    private List<String> expectedEatMeat;
-    private String actualSound;
-    List<String> actualFood;
 
     @Test
     public void testShouldSoundMyau() {
 
-        this.expectedSound = "Мяу";
+        String expectedSound = "Мяу";
 
-        this.actualSound = cat.getSound();
+        String actualSound = cat.getSound();
 
-        assertEquals(this.expectedSound, this.actualSound);
+        assertEquals(expectedSound, actualSound);
 
     }
 
     @Test
     public void testShouldFeelineFood() throws Exception {
 
-        this.expectedEatMeat = new ArrayList<>();
-        this.expectedEatMeat.add("Животные");
-        this.expectedEatMeat.add("Птицы");
-        this.expectedEatMeat.add("Рыба");
+        List<String> expectedEatMeat = new ArrayList<>();
+        expectedEatMeat.add("Животные");
+        expectedEatMeat.add("Птицы");
+        expectedEatMeat.add("Рыба");
 
-        this.actualFood = cat.getFood();
+        List<String> actualFood = cat.getFood();
 
-        assertEquals(this.expectedEatMeat, this.actualFood);
+        assertEquals(expectedEatMeat, actualFood);
 
     }
 

@@ -15,45 +15,40 @@ public class FelineTest extends TestCase {
 
     private int kittensCount;
     private int expectedKittensCount;
-    private List<String> expectedEatMeat;
-    private String expectedFamily;
-    private List<String> actualEat;
-    private String actualFamilyis;
-    int actualKittens;
 
     @Test
     public void testShouldEatMeatFeline() throws Exception {
 
-        this.expectedEatMeat = new ArrayList<>();
-        this.expectedEatMeat.add("Животные");
-        this.expectedEatMeat.add("Птицы");
-        this.expectedEatMeat.add("Рыба");
+        List<String> expectedEatMeat = new ArrayList<>();
+        expectedEatMeat.add("Животные");
+        expectedEatMeat.add("Птицы");
+        expectedEatMeat.add("Рыба");
 
-        this.actualEat = feline.eatMeat();
+        List<String> actualEat = feline.eatMeat();
 
-        assertEquals(expectedEatMeat, this.actualEat);
+        assertEquals(expectedEatMeat, actualEat);
 
     }
 
     @Test
     public void testShouldFamilyisCats() {
 
-        this.expectedFamily = "Кошачьи";
+        String expectedFamily = "Кошачьи";
 
-        this.actualFamilyis = feline.getFamily();
+        String actualFamilyis = feline.getFamily();
 
-        assertEquals(expectedFamily, this.actualFamilyis);
+        assertEquals(expectedFamily, actualFamilyis);
 
     }
 
     @Test
     public void testShouldKittensIsOne() {
 
-        this.expectedKittensCount = 1;
+        int expectedKittensCount = 1;
 
-        this.actualKittens = feline.getKittens();
+        int actualKittens = feline.getKittens();
 
-        assertEquals(this.expectedKittensCount, this.actualKittens);
+        assertEquals(expectedKittensCount, actualKittens);
 
     }
 
@@ -75,9 +70,9 @@ public class FelineTest extends TestCase {
     @Test
     public void testShouldKittensIsNumber() {
 
-        this.actualKittens = feline.getKittens(kittensCount);
+        int actualKittens = feline.getKittens(kittensCount);
 
-        assertEquals(expectedKittensCount, this.actualKittens);
+        assertEquals(expectedKittensCount, actualKittens);
 
     }
 

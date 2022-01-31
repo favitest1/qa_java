@@ -15,12 +15,6 @@ public class LionTest extends TestCase {
 
     private final String sexLion;
     private final boolean expectedHasMane;
-    private List<String> expectedEatMeat;
-    private boolean actualHasMane;
-    private int actualKittens;
-    private int expectedKittens;
-    private List<String> actualEatMeat;
-
 
     public LionTest(String sexLion, boolean expectedHasMane) {
         this.sexLion = sexLion;
@@ -38,31 +32,31 @@ public class LionTest extends TestCase {
     @Test
     public void testShouldHasMane() throws Exception {
 
-        this.actualHasMane = this.lion.doesHaveMane(this.sexLion);
+        boolean actualHasMane = this.lion.doesHaveMane(this.sexLion);
 
-        assertEquals(this.expectedHasMane, this.actualHasMane);
+        assertEquals(this.expectedHasMane, actualHasMane);
     }
 
     @Test
     public void testShouldKittensIsOne() throws Exception {
 
-        this.actualKittens = this.lion.getKittens();
-        this.expectedKittens = 1;
+        int actualKittens = this.lion.getKittens();
+        int expectedKittens = 1;
 
-        assertEquals(this.expectedKittens, this.actualKittens);
+        assertEquals(expectedKittens, actualKittens);
     }
 
     @Test
     public void testShouldLionEatMeat() throws Exception {
 
-        this.expectedEatMeat = new ArrayList<>();
-        this.expectedEatMeat.add("Животные");
-        this.expectedEatMeat.add("Птицы");
-        this.expectedEatMeat.add("Рыба");
+        List<String> expectedEatMeat = new ArrayList<>();
+        expectedEatMeat.add("Животные");
+        expectedEatMeat.add("Птицы");
+        expectedEatMeat.add("Рыба");
 
-        this.actualEatMeat = this.lion.getFood();
+        List<String> actualEatMeat = this.lion.getFood();
 
-        assertEquals(expectedEatMeat, this.actualEatMeat);
+        assertEquals(expectedEatMeat, actualEatMeat);
 
     }
 
