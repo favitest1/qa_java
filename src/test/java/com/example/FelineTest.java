@@ -19,10 +19,7 @@ public class FelineTest extends TestCase {
     @Test
     public void testShouldEatMeatFeline() throws Exception {
 
-        List<String> expectedEatMeat = new ArrayList<>();
-        expectedEatMeat.add("Животные");
-        expectedEatMeat.add("Птицы");
-        expectedEatMeat.add("Рыба");
+        List<String> expectedEatMeat = List.of("Животные", "Птицы", "Рыба");
 
         List<String> actualEat = feline.eatMeat();
 

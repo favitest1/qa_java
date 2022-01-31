@@ -49,10 +49,7 @@ public class LionTest extends TestCase {
     @Test
     public void testShouldLionEatMeat() throws Exception {
 
-        List<String> expectedEatMeat = new ArrayList<>();
-        expectedEatMeat.add("Животные");
-        expectedEatMeat.add("Птицы");
-        expectedEatMeat.add("Рыба");
+        List<String> expectedEatMeat = List.of("Животные", "Птицы", "Рыба");
 
         List<String> actualEatMeat = this.lion.getFood();
 
