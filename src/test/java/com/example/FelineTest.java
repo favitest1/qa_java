@@ -2,7 +2,6 @@ package com.example;
 
 import junit.framework.TestCase;
 import org.junit.Test;
-import java.util.ArrayList;
 import java.util.List;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
