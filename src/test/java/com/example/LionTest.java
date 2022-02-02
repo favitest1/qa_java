@@ -48,7 +48,6 @@ public class LionTest extends TestCase {
         List<String> expectedEatMeat = List.of("Животные", "Птицы", "Рыба");
         List<String> actualEatMeat = lion.getFood();
         assertEquals(expectedEatMeat, actualEatMeat);
-        System.out.println(lion.doesHaveMane());
     }
 
 }
